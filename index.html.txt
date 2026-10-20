@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Noor-ul-Quran Academy offers online Quran and Islamic education for children, girls and women in Urdu and English.">
+  <meta name="theme-color" content="#123d32">
+  <title>Noor-ul-Quran Academy | نور القرآن اکیڈمی</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #123d32;
+      --green2: #1d5947;
+      --gold: #d5b36a;
+      --cream: #fbf8f0;
+      --white: #ffffff;
+      --ink: #24342e;
+      --muted: #68766f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Poppins", "Noto Nastaliq Urdu", sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.8;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .topbar {
+      background: var(--green);
+      color: #f8e8bd;
+      text-align: center;
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+
+    header {
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid #eee6d5;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      height: 52px;
+      width: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--gold);
+      background: var(--green);
+      border: 2px solid var(--gold);
+      font-family: "Amiri", serif;
+      font-size: 28px;
+    }
+
+    .brand h1 {
+      font-size: 17px;
+      color: var(--green);
+      line-height: 1.4;
+    }
+
+    .brand p {
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    nav a:hover { color: #a27a2e; }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 85% 15%, #376c52 0, transparent 38%),
+        linear-gradient(130deg, #0e3028, #1c5543);
+      color: white;
+      padding: 88px 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: 44px;
+    }
+
+    .eyebrow {
+      color: #f0d99e;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .hero h2 {
+      font-family: "Amiri", "Noto Nastaliq Urdu", serif;
+      font-size: clamp(32px, 5vw, 55px);
+      line-height: 1.55;
+      margin: 15px 0;
+    }
+
+    .hero h2 span {
+      color: #f0d99e;
+      display: block;
+      font-family: "Poppins", sans-serif;
+      font-size: .62em;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+
+    .hero p {
+      color: #e1eae4;
+      font-size: 14px;
+      max-width: 610px;
+      margin-bottom: 24px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      border-radius: 8px;
+      padding: 11px 20px;
+      font-weight: 600;
+      font-size: 13px;
+      border: 1px solid transparent;
+      transition: .2s;
+    }
+
+    .btn-gold {
+      color: #173b2f;
+      background: var(--gold);
+    }
+
+    .btn-gold:hover { background: #f1d89d; }
+
+    .btn-outline {
+      color: white;
+      border-color: #d5b36a;
+    }
+
+    .btn-outline:hover { background: #ffffff15; }
+
+    .hero-card {
+      border: 1px solid #d5b36a80;
+      border-radius: 24px;
+      background: #ffffff0c;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 18px 50px #00000020;
+    }
+
+    .hero-emblem {
+      width: 115px;
+      height: 115px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      font-family: "Amiri", serif;
+      font-size: 65px;
+      color: #f0d99e;
+    }
+
+    .hero-card h3 {
+      font-family: "Noto Nastaliq Urdu", serif;
+      color: #f0d99e;
+      font-size: 21px;
+    }
+
+    .hero-card p { margin: 8px 0 0; font-size: 12px; }
+
+    section { padding: 76px 0; }
+
+    .section-head {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 36px;
+    }
+
+    .section-head .eyebrow { color: #96712e; }
+
+    .section-head h2 {
+      font-family: "Noto Nastaliq Urdu", serif;
+      color: var(--green);
+      font-size: clamp(24px, 3vw, 34px);
+      margin: 8px 0;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about-panel {
+      background: white;
+      border: 1px solid #eee5d2;
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .about-panel h3 {
+      color: var(--green);
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .about-panel p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .verse {
+      background: #e9efdf;
+      border-radius: 18px;
+      padding: 30px 22px;
+      text-align: center;
+      border: 1px solid #d9e2ce;
+    }
+
+    .verse .arabic {
+      font-family: "Amiri", serif;
+      font-size: 31px;
+      color: var(--green);
+      line-height: 1.9;
+    }
+
+    .verse p { font-size: 12px; color: var(--muted); }
+
+    .courses { background: #f2efe5; }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .course {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid #ebe4d4;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .course:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px #173b2f12;
+    }
+
+    .course-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: #e8efe4;
+      color: var(--green);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .course h3 { color: var(--green); font-size: 16px; }
+    .course .urdu { font-family: "Noto Nastaliq Urdu", serif; font-size: 17px; }
+    .course p { font-size: 12px; color: var(--muted); margin-top: 9px; }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .audience {
+      padding: 24px 15px;
+      text-align: center;
+      border-radius: 14px;
+      background: white;
+      border: 1px solid #eee5d2;
+    }
+
+    .audience strong { color: var(--green); display: block; }
+    .audience span { font-size: 12px; color: var(--muted); }
+
+    .admission {
+      background: var(--green);
+      color: white;
+      text-align: center;
+    }
+
+    .admission .section-head h2 { color: white; }
+    .admission .section-head p { color: #d8e5dc; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 32px 0;
+      text-align: center;
+    }
+
+    .step {
+      border: 1px solid #ffffff30;
+      border-radius: 12px;
+      padding: 22px 14px;
+    }
+
+    .step b { color: #f0d99e; font-size: 23px; }
+    .step h3 { font-size: 15px; margin: 8px 0; }
+    .step p { font-size: 12px; color: #d8e5dc; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      border-radius: 16px;
+      background: white;
+      border: 1px solid #eee5d2;
+    }
+
+    .contact-card h3 { color: var(--green); margin-bottom: 12px; }
+    .contact-card p { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+    .contact-card .btn { margin-top: 7px; }
+
+    footer {
+      background: #0b2922;
+      color: #d8e5dc;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    footer strong { color: #f0d99e; }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 20;
+      border-radius: 30px;
+      padding: 10px 16px;
+      background: #237b4b;
+      color: white;
+      box-shadow: 0 5px 20px #0002;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 800px) {
+      .nav { padding: 12px 0; flex-direction: column; }
+      nav { justify-content: center; gap: 12px; }
+      .hero { padding: 55px 0; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-card { max-width: 380px; width: 100%; margin: auto; }
+      .course-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 520px) {
+      .brand h1 { font-size: 15px; }
+      .brand p { font-size: 9px; }
+      .course-grid, .audience-grid, .steps { grid-template-columns: 1fr; }
+      section { padding: 55px 0; }
+      .hero h2 { font-size: 32px; }
+      .hero p { font-size: 13px; }
+      .about-panel, .contact-card { padding: 21px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    علمِ قرآن، روشنیِ ایمان | Quran Education • Islamic Values • Online Learning
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <div class="logo">ن</div>
+        <div>
+          <h1>نور القرآن اکیڈمی</h1>
+          <p>Noor-ul-Quran Academy</p>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home / آغاز</a>
+        <a href="#about">About / تعارف</a>
+        <a href="#courses">Courses / کورسز</a>
+        <a href="#admission">Admissions / داخلہ</a>
+        <a href="#contact">Contact / رابطہ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">WELCOME TO NOOR-UL-QURAN ACADEMY</div>
+          <h2>
+            قرآن سیکھیں، زندگی سنواریں
+            <span>Learn the Quran, Illuminate Your Life</span>
+          </h2>
+          <p>
+            بچوں، بچیوں اور خواتین کے لیے آن لائن قرآنی و دینی تعلیم۔
+            گھر بیٹھے موبائل کے ذریعے سیکھنے کا موقع۔
+            <br>
+            Online Quran and Islamic education for children, girls and women.
+            Learn from the comfort of your home.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-gold" href="#admission">داخلے کی معلومات | Admissions</a>
+            <a class="btn btn-outline" href="#courses">ہمارے کورسز | Our Courses</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-emblem">ن</div>
+          <h3>نور القرآن اکیڈمی</h3>
+          <p>Noor-ul-Quran Academy</p>
+          <p>قرآن کی تعلیم، محبت اور رہنمائی کے ساتھ</p>
+          <p>Learning the Quran with care and guidance</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">ABOUT OUR ACADEMY</div>
+          <h2>ہمارا تعارف | About Us</h2>
+          <p>ایک ایسا تعلیمی سفر جو قرآن اور دینی علم سے محبت پیدا کرے۔</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-panel">
+            <h3>اردو میں</h3>
+            <p>
+              نور القرآن اکیڈمی کا مقصد بچوں، بچیوں اور خواتین کے لیے
+              قرآنِ کریم اور بنیادی دینی تعلیم سیکھنے کا آسان آن لائن موقع
+              فراہم کرنا ہے۔
+            </p>
+            <p>
+              ہماری توجہ قرآن پڑھنے، تجوید کی بنیادی سمجھ، احادیث،
+              عقائد اور ضروری دینی معلومات پر ہے۔
+            </p>
+            <h3>In English</h3>
+            <p>
+              Noor-ul-Quran Academy aims to make Quran learning and
+              foundational Islamic education accessible online for
+              children, girls and women.
+            </p>
+            <p>
+              Learning options may include Quran reading, introductory
+              Tajweed, Hadith studies, Islamic beliefs and essential
+              Islamic knowledge.
+            </p>
+          </div>
+
+          <div class="verse">
+            <div class="arabic" lang="ar" dir="rtl">
+              وَقُلْ رَبِّ زِدْنِي عِلْمًا
+            </div>
+            <p>اور دعا کریں: اے میرے رب! میرے علم میں اضافہ فرما۔</p>
+            <p>And say: My Lord, increase me in knowledge.</p>
+            <p>سورۃ طٰہٰ، 20:114 | Surah Taha 20:114</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="courses" id="courses">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">OUR LEARNING PROGRAMS</div>
+          <h2>ہمارے کورسز | Our Courses</h2>
+          <p>آسان انداز میں بنیادی قرآنی اور دینی تعلیم حاصل کریں۔</p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course">
+            <div class="course-icon">☾</div>
+            <h3 class="urdu">قرآنِ کریم</h3>
+            <h3>Quran Reading</h3>
+            <p>حروف اور قرآنِ کریم پڑھنے کی بنیادی تعلیم۔</p>
+            <p>Learn the basics of Quran reading.</p>
+          </article>
+
+          <article class="course">
+            <div class="course-icon">✦</div>
+            <h3 class="urdu">تجوید</h3>
+            <h3>Tajweed Basics</h3>
+            <p>قرآن پڑھنے کے بنیادی قواعد کی تعلیم۔</p>
+            <p>Learn introductory rules of Quran recitation.</p>
+          </article>
+
+          <article class="course">
+            <div class="course-icon">۞</div>
+            <h3 class="urdu">احادیث</h3>
+            <h3>Hadith Studies</h3>
+            <p>منتخب احادیث اور ان سے ملنے والے اسباق۔</p>
+            <p>Explore selected Hadith and their lessons.</p>
+          </article>
+
+          <article class="course">
+            <div class="course-icon">◇</div>
+            <h3 class="urdu">عقائد</h3>
+            <h3>Islamic Beliefs</h3>
+            <p>بنیادی اسلامی عقائد کا تعارف۔</p>
+            <p>An introduction to foundational Islamic beliefs.</p>
+          </article>
+
+          <article class="course">
+            <div class="course-icon">📖</div>
+            <h3 class="urdu">دینی مسائل</h3>
+            <h3>Essential Islamic Knowledge</h3>
+            <p>روزمرہ زندگی سے متعلق بنیادی دینی معلومات۔</p>
+            <p>Learn essential Islamic knowledge for daily life.</p>
+          </article>
+
+          <article class="course">
+            <div class="course-icon">♡</div>
+            <h3 class="urdu">اسلامی آداب</h3>
+            <h3>Islamic Manners</h3>
+            <p>اچھے اخلاق اور اسلامی آداب کی تعلیم۔</p>
+            <p>Learn good manners and Islamic values.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">WHO CAN JOIN?</div>
+          <h2>کس کے لیے؟ | Who Can Join?</h2>
+          <p>آن لائن تعلیم گھر سے حاصل کرنے کے لیے رابطہ کریں۔</p>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience">
+            <strong>بچے | Children</strong>
+            <span>بنیادی قرآنی تعلیم | Quran Basics</span>
+          </div>
+          <div class="audience">
+            <strong>بچیاں | Girls</strong>
+            <span>قرآن اور دینی علم | Quran & Islamic Learning</span>
+          </div>
+          <div class="audience">
+            <strong>خواتین | Women</strong>
+            <span>بنیادی دینی تعلیم | Foundational Islamic Education</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="admission" id="admission">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">ADMISSIONS INFORMATION</div>
+          <h2>داخلے کی معلومات | Online Admissions</h2>
+          <p>
+            داخلے، اوقات اور دستیاب کورسز کے بارے میں معلومات حاصل کرنے
+            کے لیے والدین رابطہ کر سکتے ہیں۔
+          </p>
+          <p>
+            Parents can contact us to ask about admissions, class timings
+            and available courses.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <b>01</b>
+            <h3>رابطہ کریں | Contact Us</h3>
+            <p>اپنی مطلوبہ کلاس کے بارے میں پوچھیں۔</p>
+            <p>Tell us which course interests you.</p>
+          </div>
+          <div class="step">
+            <b>02</b>
+            <h3>معلومات لیں | Get Details</h3>
+            <p>اوقات اور داخلے کی تفصیلات معلوم کریں۔</p>
+            <p>Ask about timings and admission details.</p>
+          </div>
+          <div class="step">
+            <b>03</b>
+            <h3>آغاز کریں | Get Started</h3>
+            <p>تفصیلات طے ہونے پر کلاس شروع کریں۔</p>
+            <p>Begin once the arrangements are confirmed.</p>
+          </div>
+        </div>
+
+        <a class="btn btn-gold" href="#contact">
+          رابطہ کریں | Enquire About Admission
+        </a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">WE ARE HERE TO HELP</div>
+          <h2>رابطہ کریں | Contact Us</h2>
+          <p>داخلے اور کورسز کے بارے میں معلومات حاصل کریں۔</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>والدین کے لیے | For Parents</h3>
+            <p>
+              اپنے بچے کی عمر، مطلوبہ کورس اور مناسب وقت کے بارے میں
+              پیغام بھیجیں۔
+            </p>
+            <p>
+              Message us about the learner's age, preferred course
+              and suitable class timings.
+            </p>
+            <!-- Replace the placeholder with an approved public WhatsApp number -->
+            <a class="btn btn-gold"
+               href="https://wa.me/923XXXXXXXXX"
+               target="_blank" rel="noopener noreferrer">
+              WhatsApp پر رابطہ | Contact on WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-card">
+            <h3>داخلے کی معلومات | Admission Enquiries</h3>
+            <p>
+              کورسز، کلاس کے اوقات اور داخلے کے طریقے کے بارے میں پوچھیں۔
+            </p>
+            <p>
+              Ask about courses, class timings and the admission process.
+            </p>
+            <!-- Replace with a second approved public WhatsApp number if needed -->
+            <a class="btn btn-gold"
+               href="https://wa.me/923XXXXXXXXX"
+               target="_blank" rel="noopener noreferrer">
+              معلومات حاصل کریں | Get Information
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>نور القرآن اکیڈمی | Noor-ul-Quran Academy</strong>
+      <p>علمِ قرآن، روشنیِ ایمان</p>
+      <p>Quran Education • Islamic Values • Online Learning</p>
+      <p>© <span id="year"></span> Noor-ul-Quran Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="#contact"
+     aria-label="Contact Noor-ul-Quran Academy">
+    رابطہ کریں | Contact
+  </a>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
